@@ -1,4 +1,4 @@
-FROM cosmintitei/bash-curl
+FROM curlimages/curl:latest
 COPY update.sh .
 RUN chmod +x update.sh
 
