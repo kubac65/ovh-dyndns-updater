@@ -1,6 +1,6 @@
-FROM curlimages/curl:latest
+FROM alpine:latest
 COPY update.sh .
-RUN chmod +x update.sh
+RUN apk update && apk --no-cache add curl && chmod +x update.sh
 
 ENV DYNHOST_USER DYNHOST_USER
 ENV DYNHOST_PASSWORD DYNHOST_PASSWORD
